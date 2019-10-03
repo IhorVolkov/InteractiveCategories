@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>JS_lesson1</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="main_block">
+      <div class="left">
+        <a href="#">
+          <img src="./kamaz.png" alt="kamaz" />
+          <div class="titleOfCubeh1">
+            <h1>Gruzoperevozki</h1>
+            <img src="./kamaz.png" alt="kamaz" />
+          </div>
+          <div class="titleOfCubeP">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum atque
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="central">
+        <a href="#">
+          <img src="./tractor.png" alt="tractor" />
+          <div class="titleOfCubeh1">
+            <h1>S/Hozyaistvo</h1>
+            <img src="./tractor.png" alt="tractor" />
+          </div>
+          <div class="titleOfCubeP">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum atque
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="right">
+        <a href="#">
+          <img src="./manipul.png" alt="manipulyator" />
+          <div class="titleOfCubeh1">
+            <h1>SOS 911</h1>
+            <img src="./manipul.png" alt="manipulyator" />
+          </div>
+          <div class="titleOfCubeP">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum atque
+            </p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        background: rgb(50, 51, 51);
+      }
+      .main_block {
+        margin: 0 auto;
+        margin-top: 250px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 600px;
+        height: 200px;
+        /* background: #ccc; */
+      }
+      .main_block .left,
+      .central,
+      .right {
+        display: block;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        margin-top: 25px;
+        background: rgb(50, 51, 51);
+        cursor: pointer;
+        -webkit-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.9);
+        -moz-box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.9);
+        box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.9);
+        font-size: 0;
+        position: relative;
+        transition: 0.6s linear;
+      }
+      .left img,
+      .central img,
+      .right img {
+        margin-top: 25px;
+        display: inline-block;
+      }
+      .left p,
+      .central p,
+      .right p {
+        font-family: 'OpenSans Regular';
+        font-size: 18px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0px;
+      }
+      h1 {
+        font-size: 20px;
+        position: absolute;
+        top: -15px;
+      }
+      .left h1 {
+        left: 5px;
+      }
+      .central h1 {
+        left: 20px;
+      }
+      .right h1 {
+        left: 40px;
+      }
+      .titleOfCubeh1,
+      .titleOfCubeP {
+        display: none;
+        position: absolute;
+        top: 75px;
+        transition: 0.7s all;
+      }
+      .left:hover .titleOfCubeh1,
+      .central:hover .titleOfCubeh1,
+      .right:hover .titleOfCubeh1 {
+        background: rgb(238, 78, 20);
+        display: block;
+        width: 150px;
+        height: 150px;
+        transform: translateY(-150px);
+        transition: 6s all;
+      }
+      .left:hover .titleOfCubeh1 h1,
+      .central:hover .titleOfCubeh1 h1,
+      .right:hover .titleOfCubeh1 h1 {
+        margin-top: 25px;
+        color: #fff;
+      }
+
+      .left:hover .titleOfCubeP,
+      .central:hover .titleOfCubeP,
+      .right:hover .titleOfCubeP {
+        background: rgb(243, 242, 241);
+        display: block;
+        width: 150px;
+        height: 150px;
+        transition: 6s all;
+      }
+      .left:hover .titleOfCubeP p,
+      .central:hover .titleOfCubeP p,
+      .right:hover .titleOfCubeP p {
+        color: brown;
+        font-size: 20px;
+      }
+
+      .left:hover,
+      .central:hover,
+      .right:hover {
+        transform: scale(1.2, 1.2);
+      }
+    </style>
+  </body>
+</html>
